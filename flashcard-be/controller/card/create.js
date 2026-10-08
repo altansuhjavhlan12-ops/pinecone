@@ -1,5 +1,5 @@
-import { CardModel } from "../models/card.model.js"
-import { WordModel } from "../models/word.model.js"
+import { CardModel } from "../../models/card.model.js"
+import { WordModel } from "../../models/word.model.js"
 import jwt from 'jsonwebtoken'
  
 export const createCard = async (req,res) =>{

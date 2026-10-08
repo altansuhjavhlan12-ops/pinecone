@@ -1,22 +1,22 @@
 import mongoose from "mongoose";
 const { Schema } = mongoose;
  
-const WordSchema = new Schema({
-  username: {
+const WordSchema = new mongoose.Schema({
+  enWord: {
     type: String,
     required: true,
   },
-  email: {
+  mnWord: {
     type: String,
     required: true,
   },
-  password: {
-    type: String,
+ card: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Card',
     required: true,
+    },
   },
-}, {
-  timestamps: true
-});
+);
  
 export const WordModel = mongoose.model('Word', WordSchema)
  
